@@ -1,12 +1,12 @@
 # Keychron Q11 vial-ijkl
 
-A fork of Keyboard Q11 with ISO layout with VIAL support and customizations:
+A fork of Keychron Q11 with ISO layout with VIAL support and customizations:
 <ul>
 <li> Mac base layer with tap dance functions
   <ul>
   <li>Right Fn double tap: Toggle Mac function-layer</li>
   <li>§ key tap: §</li>
-  <li>§ key doulbe tap: Toggle Mac function-layer</li>
+  <li>§ key double tap: Toggle Mac function-layer</li>
   <li>Right Alt doulbe tap: Toggle layer 4</li>
   <li>Left Fn hold: Toggle Mac function-layer</li>
   </ul>
@@ -42,14 +42,14 @@ A fork of Keyboard Q11 with ISO layout with VIAL support and customizations:
 <br>
 
 
-Fork based on Tymon3310 repo:<br>
+Fork based on Tymon3310 vial-qmk repo:<br>
 https://github.com/Tymon3310/vial-qmk/tree/vial-updated-keychron
 <br>
 <br>
 
 # Layers
 #### MAC_BASE - Layer 0 <br>
-![MAC_BASE](/keychron-vial/vial-qmk/keyboards/keychron/q11/iso_encoder/keymaps/vial-ijkl/img/keychron_q11_iso_encoder_vial-ijkl_layer00.png "MAC_BASE")
+![MAC_BASE](img/keychron_q11_iso_encoder_vial-ijkl_layer00.png "MAC_BASE")
 
 Tap Dance<br>
 | TD | On Tap | On hold | On double tap | On tap + hold |
@@ -72,7 +72,7 @@ Layer 0 macros<br>
 #### MAC_FN - Layer 1 <br>
 
 IJKL to arrow keys layer
-![MAC_FN](/keychron-vial/vial-qmk/keyboards/keychron/q11/iso_encoder/keymaps/vial-ijkl/img/keychron_q11_iso_encoder_vial-ijkl_layer01.png "MAC_FN")
+![MAC_FN](img/keychron_q11_iso_encoder_vial-ijkl_layer01.png "MAC_FN")
 
 
 Layer 1 macros<br>
@@ -85,20 +85,20 @@ Layer 1 macros<br>
 <br>
 
 Special keys:<br>
-| Special key | Function |
-| -- | -- |
-| 0x7e40 | Toggle active layer indication keys 
+| Special key | Function | QMK keycode |
+| -- | -- | -- | 
+| 0x7e40 | Toggle active layer indication key LEDs | TOGGLE_LAYER_LEDS
 
 <br>
 
 #### WIN_BASE - Layer 2 <br>
-Retain default layout on Windows layer<br>
-![WIN_BASE](/keychron-vial/vial-qmk/keyboards/keychron/q11/iso_encoder/keymaps/vial-ijkl/img/keychron_q11_iso_encoder_vial-ijkl_layer02.png "WIN_BASE")
+Retain default layout on Windows base layer<br>
+![WIN_BASE](img/keychron_q11_iso_encoder_vial-ijkl_layer02.png "WIN_BASE")
 <br>
 
 #### WIN_FN - Layer 3 <br>
 Retain default layout Windows function layer<br>
-![WIN_FN](/keychron-vial/vial-qmk/keyboards/keychron/q11/iso_encoder/keymaps/vial-ijkl/img/keychron_q11_iso_encoder_vial-ijkl_layer03.png "WIN_FN")
+![WIN_FN](img/keychron_q11_iso_encoder_vial-ijkl_layer03.png "WIN_FN")
 
 #### Layer 4<br>
 
@@ -111,7 +111,7 @@ Special functions layer:<br>
 <li>Fn + Capslock: Caps Lock Toggle</li>
 </ul>
 
-![WIN_FN](/keychron-vial/vial-qmk/keyboards/keychron/q11/iso_encoder/keymaps/vial-ijkl/img/keychron_q11_iso_encoder_vial-ijkl_layer04.png "WIN_FN")
+![WIN_FN](img/keychron_q11_iso_encoder_vial-ijkl_layer04.png "WIN_FN")
 
 Layer 4 macros<br>
 | Macro | Action |
@@ -119,3 +119,36 @@ Layer 4 macros<br>
 | 3 | Shift + F10 |
 | 4 | Ctrl + Page Up |
 | 5 | Ctrl + Page Down |
+
+
+## Make instructions
+
+Set up QMK build enviroment. Use repo: [Tymon3310/vial-updated-keychron](https://github.com/Tymon3310/vial-qmk/tree/vial-updated-keychron)<br>
+
+Create vial-ijkl -folder for Keychron Q11 ISO: <br>
+```
+keychron-vial/vial-qmk/keyboards/q11/iso_encoder/vial-ijkl
+```
+
+Place following files on vial-ijkl -folder:
+```
+config.h
+keymap.c
+rules.mk
+vial.json
+```
+
+
+Make bin-file:
+```
+qmk compile -kb keychron/q11/iso_encoder -km vial-ijkl
+```
+
+Flash bin file to keyboard halves. Follow the standard flashing prodecure for Q11. Flash the left half first and then the right half.<br>
+
+Open VIAL. <br>
+
+Load saved layout:
+```
+keychron_q11_iso_encoder_vial-ijkl.vil
+```

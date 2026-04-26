@@ -7,4 +7,5 @@
 #define VIAL_UNLOCK_COMBO_ROWS { 0, 9 }
 #define VIAL_UNLOCK_COMBO_COLS { 1, 7 }
 
+// Set number of macros 10. Save some space flash
 #define DYNAMIC_KEYMAP_MACRO_COUNT 10

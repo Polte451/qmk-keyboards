@@ -2,19 +2,17 @@
 
 Collection of keyboard layouts
 
-
-
 ## Keychron Q11 SO vial-ijkl
 
-https://github.com/Polte451/qmk-keyboards/keychron_q11_iso/vial-ijkl
+[![Keychron Q11 ISO vial-ijkl](keychron_q11_iso/vial-ijkl/img/keychron_q11_iso_encoder_vial-ijkl_layer00.png "Keychron Q11 ISO vial-ijkl")](https://github.com/Polte451/qmk-keyboards/tree/master/keychron_q11_iso/vial-ijkl)
 
-A fork of Keyboard Q11 with ISO layout with VIAL support and customizations:
+A fork of Keychron Q11 with ISO layout with VIAL support and customizations:
 <ul>
 <li> Mac base layer with tap dance functions
   <ul>
   <li>Right Fn double tap: Toggle Mac function-layer</li>
   <li>§ key tap: §</li>
-  <li>§ key doulbe tap: Toggle Mac function-layer</li>
+  <li>§ key double tap: Toggle Mac function-layer</li>
   <li>Right Alt doulbe tap: Toggle layer 4</li>
   <li>Left Fn hold: Toggle Mac function-layer</li>
   </ul>
@@ -35,7 +33,7 @@ A fork of Keyboard Q11 with ISO layout with VIAL support and customizations:
   <li>Layer 1 active, white backlight on key M2 / F14</li>
   <li>Layer 2 active, white backlight on key M3 / F16</li>
   <li>Layer 4 active, white backlight on key M1 / F13</li>
-  <li>Custom QMK keycode keymap.c: TOGGLE_LAYER_LEDS</li>
+  <li>Custom QMK keycode on keymap.c: TOGGLE_LAYER_LEDS</li>
   </ul>
 <li>Volume Wheel on Mac base layer
   <ul>
@@ -49,9 +47,5 @@ A fork of Keyboard Q11 with ISO layout with VIAL support and customizations:
 </ul>
 <br>
 
-Fork based on Tymon3310 repo:<br>
-
+Fork based on Tymon3310 vial-qmk repo:<br>
 https://github.com/Tymon3310/vial-qmk/tree/vial-updated-keychron
-<br>
-
-<img src="keychron_q11_iso/vial-ijkl/img/keychron_q11_iso_encoder_vial-ijkl_layer00.png" width="1068px">
