@@ -13,7 +13,7 @@ A fork of Keychron Q11 with ISO layout with VIAL support and customizations:
   <li>Right Fn double tap: Toggle Mac function-layer</li>
   <li>§ key tap: §</li>
   <li>§ key double tap: Toggle Mac function-layer</li>
-  <li>Right Alt doulbe tap: Toggle layer 4</li>
+  <li>Right Alt double tap: Toggle layer 4</li>
   <li>Left Fn hold: Toggle Mac function-layer</li>
   </ul>
 <li> Mac function layer: 
