@@ -4,7 +4,7 @@ Collection of keyboard layouts
 
 ## Keychron Q11 SO vial-ijkl
 
-[![Keychron Q11 ISO vial-ijkl](keychron_q11_iso/vial-ijkl/img/keychron_q11_iso_encoder_vial-ijkl_layer00.png "Keychron Q11 ISO vial-ijkl")](https://github.com/Polte451/qmk-keyboards/tree/master/keychron_q11_iso/vial-ijkl)
+[![Keychron Q11 ISO vial-ijkl](keychron/q11_iso/vial-ijkl/img/keychron_q11_iso_encoder_vial-ijkl_layer00.png "Keychron Q11 ISO vial-ijkl")](https://github.com/Polte451/qmk-keyboards/tree/master/keychron/q11_iso/vial-ijkl)
 
 A fork of Keychron Q11 with ISO layout with VIAL support and customizations:
 <ul>
