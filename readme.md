@@ -12,7 +12,7 @@ Collection of keyboard layouts:<br>
 
 [![Keychron Q11 ISO vial-ijkl](keychron/q11_iso/vial-ijkl/img/keychron_q11_iso_encoder_vial-ijkl_layer00.png "Keychron Q11 ISO vial-ijkl")](https://github.com/Polte451/qmk-keyboards/tree/master/keychron/q11_iso/vial-ijkl)
 
-A fork of Glorious GMMK 2 Compact 65% ISO keyboard with nordic layout, VIAL-support and customizations:
+A fork of Keychron Q11 with ISO nordic layout, VIAL support and customizations:
 <ul>
 <li> Mac base layer with tap dance functions
   <ul>
@@ -60,6 +60,8 @@ https://github.com/Tymon3310/vial-qmk/tree/vial-updated-keychron
 
 ### Glorious GMMK 2 Compact 65% ISO vial-ijkl
 [![Glorious GMMK 2 Compact 65% ISO vial-ijkl](gmmk/gmmk2_p65_iso/vial-ijkl/img/gmmk_2_p65_iso_vial-ijkl-layer00.png "Glorious GMMK 2 Compact 65% ISO vial-ijkl")](https://github.com/Polte451/qmk-keyboards/tree/master/gmmk/gmmk2_p65_iso/vial-ijkl)
+<br>
+
 A fork of Glorious GMMK 2 Compact 65% ISO keyboard with nordic layout, VIAL-support and customizations:
 <ul>
 <li>Total 4 layers

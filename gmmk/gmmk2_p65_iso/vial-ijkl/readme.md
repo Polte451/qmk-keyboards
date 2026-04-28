@@ -44,7 +44,7 @@ Link to the Vial repo:<br>
 https://drive.google.com/file/d/1U8k3f5xzr2TqhwZ8NwDzYpNBv4OSHxga/view?usp=sharing
 
 
-#### Layer 0 <br>
+## Layer 0 <br>
 Base layer<br>
 ![gmmk_2_p65_iso_vial-ijkl_layer00](img/gmmk_2_p65_iso_vial-ijkl-layer00.png "gmmk_2_p65_iso_vial-ijkl_layer00")
 <br>
@@ -68,9 +68,7 @@ Key Combos<br>
 | Caps Lock Key + Space | Toggle Layer 2 |
 | Tab + Space + Caps Lock | Toggle Layer 3 |
 
-<br>
-
-#### Layer 1 <br>
+## Layer 1 <br>
 Function row, RGB and media controls layer<br>
 ![gmmk_2_p65_iso_vial-ijkl_layer01](img/gmmk_2_p65_iso_vial-ijkl-layer01.png "gmmk_2_p65_iso_vial-ijkl_layer01")
 <br>
@@ -80,7 +78,7 @@ Layer 1 macros<br>
 | -- | -- |
 | 2 | Ctrl + Alt + Tab |
 
-#### Layer 2 <br>
+## Layer 2 <br>
 IJKL to arrow keys<br>
 ![gmmk_2_p65_iso_vial-ijkl_layer02](img/gmmk_2_p65_iso_vial-ijkl-layer02.png "gmmk_2_p65_iso_vial-ijkl_layer02")
 <br>
@@ -94,7 +92,7 @@ Layer 2 macros<br>
 | 3 | Shift + F10 |
 <br>
 
-#### Layer 3 <br>
+## Layer 3 <br>
 IJKL to mouse<br>
 ![gmmk_2_p65_iso_vial-ijkl_layer03](img/gmmk_2_p65_iso_vial-ijkl-layer03.png "gmmk_2_p65_iso_vial-ijkl_layer03")
 <br>
