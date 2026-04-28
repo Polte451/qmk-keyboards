@@ -1,12 +1,17 @@
 # QMK-keyboard layouts
 
-Collection of keyboard layouts
+Collection of keyboard layouts:<br>
+* [Keychron](#keychron)
+  * [Keychron Q11 ISO vial-ijkl](#keychron-q11-iso-vial-ijkl)
+* [Glorious](#glorious)
+  * [Glorious GMMK 2 Compact 65% ISO vial](#glorious-gmmk-2-compact-65-iso-vial)
 
-## Keychron Q11 SO vial-ijkl
+## Keychron
+### Keychron Q11 ISO vial-ijkl
 
 [![Keychron Q11 ISO vial-ijkl](keychron/q11_iso/vial-ijkl/img/keychron_q11_iso_encoder_vial-ijkl_layer00.png "Keychron Q11 ISO vial-ijkl")](https://github.com/Polte451/qmk-keyboards/tree/master/keychron/q11_iso/vial-ijkl)
 
-A fork of Keychron Q11 with ISO layout with VIAL support and customizations:
+A fork of Glorious GMMK 2 Compact 65% ISO keyboard with nordic layout, VIAL-support and customizations:
 <ul>
 <li> Mac base layer with tap dance functions
   <ul>
@@ -49,3 +54,13 @@ A fork of Keychron Q11 with ISO layout with VIAL support and customizations:
 
 Fork based on Tymon3310 vial-qmk repo:<br>
 https://github.com/Tymon3310/vial-qmk/tree/vial-updated-keychron
+
+## Glorious
+### Glorious GMMK 2 Compact 65% ISO vial
+[![Glorious GMMK 2 Compact 65% ISO vial](gmmk/gmmk2_p65_iso/vial/img/gmmk_2_p65_iso_vial-layer00.png "Glorious GMMK 2 Compact 65% ISO vial")](https://github.com/Polte451/qmk-keyboards/tree/master/gmmk/gmmk2_p65_iso/vial)
+
+A fork of Glorious GMMK 2 Compact 65% ISO keyboard layout with VIAL-support.<br>
+<br>
+Fork based on Reddit user ptrxyz fork of Vial git repo:<br>
+https://www.reddit.com/r/glorious/comments/w5djer/comment/it533dj/
+<br>
