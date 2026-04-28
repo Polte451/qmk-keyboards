@@ -1,6 +1,6 @@
 # Keychron Q11 vial-ijkl
 
-A fork of Keychron Q11 with ISO layout with VIAL support and customizations:
+A fork of Keychron Q11 with ISO nordic layout, VIAL support and customizations:
 <ul>
 <li> Mac base layer with tap dance functions
   <ul>
@@ -20,6 +20,7 @@ A fork of Keychron Q11 with ISO layout with VIAL support and customizations:
   <li>Extra layer: layer_4
     <ul>
     <li>IJKl to arrow keys</li>
+    <li>Q11 runs out of space on flash if there are more than 5 layers</li>
     </ul>
   </ul>
 <li> Active layer indication on M1-M5 (F13-F20) keys with white backlight with keymap.c code
@@ -123,7 +124,7 @@ Layer 4 macros<br>
 
 ## Make instructions
 
-Set up QMK build enviroment. Use repo: [Tymon3310/vial-updated-keychron](https://github.com/Tymon3310/vial-qmk/tree/vial-updated-keychron)<br>
+Set up QMK build environment. Use repo: [Tymon3310/vial-updated-keychron](https://github.com/Tymon3310/vial-qmk/tree/vial-updated-keychron)<br>
 
 Create vial-ijkl -folder for Keychron Q11 ISO: <br>
 ```
