@@ -1,6 +1,6 @@
 # GMMK 2 65% ISO vial
 
-A fork of Glorious GMMK 2 Compact 65% ISO keyboard layout with VIAL-support.<br>
+ISO keyboard layout with VIAL-support.<br>
 
 <br>
 Fork based on Reddit user ptrxyz fork of Vial git repo:<br>

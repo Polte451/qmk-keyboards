@@ -1,6 +1,6 @@
 # Glorious GMMK 2 Compact 65% ISO vial-ijkl
 
-A fork of Glorious GMMK 2 Compact 65% ISO keyboard with nordic layout, VIAL-support and customizations:
+ISO Nordic layout. VIAL-support with customizations:
 <ul>
 <li>Total 4 layers
 <li>Layer 0: Base layer
@@ -64,9 +64,9 @@ Key Combos<br>
 | Combo | Function |
 | -- | -- | 
 | Right Control + Caps Lock | Toggle Caps Lock |
+| Caps Lock + Space | Toggle Layer 2 |
+| Tab + Space | Toggle Layer 3 |
 | Alt + 4 | Sleep |
-| Caps Lock Key + Space | Toggle Layer 2 |
-| Tab + Space + Caps Lock | Toggle Layer 3 |
 
 ## Layer 1 <br>
 Function row, RGB and media controls layer<br>

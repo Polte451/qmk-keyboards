@@ -1,6 +1,6 @@
 # Keychron Q11 vial-ijkl
 
-A fork of Keychron Q11 with ISO nordic layout, VIAL support and customizations:
+ISO Nordic layout. VIAL support with customizations:
 <ul>
 <li> Mac base layer with tap dance functions
   <ul>
@@ -10,9 +10,9 @@ A fork of Keychron Q11 with ISO nordic layout, VIAL support and customizations:
   <li>Right Alt double tap: Toggle layer 4</li>
   <li>Left Fn hold: Toggle Mac function-layer</li>
   </ul>
-<li> Mac function layer: 
+<li> Mac function layer 
   <ul>
-  <li>IJKL to arrow keys customization
+  <li>IJKL to arrow keys
   </ul>
 <li> Retain default functions on Windows layers </li>
 <li> Total 5 mappable layers
@@ -23,11 +23,12 @@ A fork of Keychron Q11 with ISO nordic layout, VIAL support and customizations:
     <li>Q11 runs out of space on flash if there are more than 5 layers</li>
     </ul>
   </ul>
-<li> Active layer indication on M1-M5 (F13-F20) keys with white backlight with keymap.c code
+<li> Active layer indication on M1-M5 (F13-F20) keys with white backlight
   <ul>
-  <li>Layer 1 active, white backlight on key M2 / F14</li>
-  <li>Layer 2 active, white backlight on key M3 / F16</li>
-  <li>Layer 4 active, white backlight on key M1 / F13</li>
+  <li>Layer 1 active: White backlight on key M2 / F14</li>
+  <li>Layer 2 active: White backlight on key M3 / F16</li>
+  <li>Layer 4 active: White backlight on key M1 / F13</li>
+  <li>Backlight function customization with keymaps.c code
   <li>Custom QMK keycode keymap.c: TOGGLE_LAYER_LEDS</li>
   </ul>
 <li>Volume Wheel on Mac base layer
@@ -39,7 +40,15 @@ A fork of Keychron Q11 with ISO nordic layout, VIAL support and customizations:
   <ul>
   <li>When Caps Lock active: White backlight on Caps Lock key
   </ul>
+<li>Key combinations
+  <ul>
+  <li>Caps Lock + Left Control: Toggle Caps Lock</li>
+  <li>Caps Lock + Space: Toggle MAC_FN-layer</li>
+  <li>Left Shift + Space: Toggle LAYER_4</li>
+  </ul>
+</li>
 </ul>
+
 <br>
 
 
@@ -59,7 +68,7 @@ Tap Dance<br>
 | 2 | Home | - | End | - |
 | 3 | Page Up | - | Page Down | - |
 | 4 | Apps | - | TG(1) | - |
-| 5 | Alt | - | TG(4) | - |
+| 5 | Alt | MO(4) | TG(4) | - |
 
 <br>
 
@@ -70,7 +79,7 @@ Layer 0 macros<br>
 | 5 | Ctrl + Page Down |
 <br>
 
-#### MAC_FN - Layer 1 <br>
+### MAC_FN - Layer 1 <br>
 
 IJKL to arrow keys layer
 ![MAC_FN](img/keychron_q11_iso_encoder_vial-ijkl_layer01.png "MAC_FN")
@@ -92,25 +101,26 @@ Special keys:<br>
 
 <br>
 
-#### WIN_BASE - Layer 2 <br>
+### WIN_BASE - Layer 2 <br>
 Retain default layout on Windows base layer<br>
 ![WIN_BASE](img/keychron_q11_iso_encoder_vial-ijkl_layer02.png "WIN_BASE")
 <br>
 
-#### WIN_FN - Layer 3 <br>
+### WIN_FN - Layer 3 <br>
 Retain default layout Windows function layer<br>
 ![WIN_FN](img/keychron_q11_iso_encoder_vial-ijkl_layer03.png "WIN_FN")
 
-#### Layer 4<br>
+### Layer 4<br>
 
-Special functions layer:<br>
+Special functions layer<br>
 <ul>
 <li>IJKL to mouse cursor movement</li>
 <li>Function row media controls</li>
 <li>QWERT, ASDFG backlight controls</li>
 <li>Arrow keys media control</li>
-<li>Fn + Capslock: Caps Lock Toggle</li>
+<li>Fn + Caps Lock: Caps Lock Toggle</li>
 </ul>
+<br>
 
 ![WIN_FN](img/keychron_q11_iso_encoder_vial-ijkl_layer04.png "WIN_FN")
 
@@ -128,7 +138,7 @@ Set up QMK build environment. Use repo: [Tymon3310/vial-updated-keychron](https:
 
 Create vial-ijkl -folder for Keychron Q11 ISO: <br>
 ```
-keychron-vial/vial-qmk/keyboards/q11/iso_encoder/vial-ijkl
+keychron-vial/vial-qmk/keyboards/q11/iso_encoder/keymaps/vial-ijkl
 ```
 
 Place following files on vial-ijkl -folder:
