@@ -3,6 +3,7 @@
 Collection of keyboard layouts<br>
 * [Keychron](#keychron)
   * [Keychron Q11 ISO vial-ijkl](#keychron-q11-iso-vial-ijkl)
+  * [Keychron K10 Pro RGB ISO vial-ijkl](#keychron-k10-pro-iso-rgb-vial-ijkl)
 * [Glorious](#glorious)
   * [Glorious GMMK 2 Compact 65% ISO vial-ijkl](#glorious-gmmk-2-compact-65-iso-vial-ijkl)
   * [Glorious GMMK 2 Compact 65% ISO vial](#glorious-gmmk-2-compact-65-iso-vial)
@@ -63,7 +64,58 @@ ISO Nordic layout. VIAL support with customizations:
 
 Fork based on Tymon3310 vial-qmk repo:<br>
 https://github.com/Tymon3310/vial-qmk/tree/vial-updated-keychron
+<br>
+<br>
 
+
+# Keychron K10 Pro ISO RGB vial-ijkl
+
+[![Keychron Q11 ISO vial-ijkl](keychron/k10_pro_rgb/vial-ijkl/img/keychron_k10_pro_iso_rgb_vial-ijkl_layer00.png "Keychron Q11 ISO vial-ijkl")](https://github.com/Polte451/qmk-keyboards/tree/master/keychron/k10_pro_rgb/vial-ijkl)
+
+ISO Nordic layout. VIAL support with customizations:
+<ul>
+<li> Mac base layer with tap dance functions
+  <ul>
+  <li>Right Fn double tap: Toggle Mac function-layer</li>
+  <li>§ key tap: §</li>
+  <li>§ key double tap: Toggle Mac function-layer</li>
+  <li>Right Alt double tap: Toggle layer 4 with IJKL to mouse </li>
+  <li>Right Fn hold: Toggle Mac function-layer with IJKL to arrow keys</li>
+  </ul>
+<li>Key combinations
+  <ul>
+  <li>Caps Lock + Left Control: Toggle Caps Lock</li>
+  <li>Caps Lock + Space: Toggle MAC_FN-layer</li>
+  <li>Left Shift + Space: Toggle LAYER_4</li>
+  <li>Left Alt + 4: Sleep</li>
+  </ul>
+</li>
+<li> Mac function layer: 
+  <ul>
+  <li>IJKL to arrow keys customization
+  </ul>
+<li> Retain default functions on Windows layers </li>
+<li> Total 5 mappable layers
+  <ul>
+  <li>Extra layer: LAYER_4
+    <ul>
+    <li>IJKl to arrow keys</li>
+    <li>K10 Pro runs out of space on flash if there are more than 5 layers</li>
+    </ul>
+  </ul>
+<li> Backlight LED customizations
+  <ul>
+  <li>Active layer indication with white LED backlight on keys with key mapping on MAC_FN, WIN_FN and LAYER_4</li>
+  <li>When Caps Lock active: White backlight on Caps Lock key</li>
+  <li>When Scroll Lock active: White backlight on Scroll Lock key</li>
+  </ul>
+</ul>
+<br>
+
+Fork based on Tymon3310 vial-qmk repo:<br>
+https://github.com/tymon3310/vial-qmk/tree/vial-keychron
+<br>
+<br>
 ## Glorious
 
 ### Glorious GMMK 2 Compact 65% ISO vial-ijkl

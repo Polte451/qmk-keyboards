@@ -35,7 +35,7 @@ ISO Nordic layout. VIAL support with customizations:
   <ul>
   <li>Active layer indication with white LED backlight on keys with key mapping on MAC_FN, WIN_FN and LAYER_4</li>
   <li>When Caps Lock active: White backlight on Caps Lock key</li>
-  <li>When Scroll Lock: White backlight on Scroll Lock key</li>
+  <li>When Scroll Lock active: White backlight on Scroll Lock key</li>
   </ul>
 </ul>
 <br>
