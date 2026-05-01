@@ -67,8 +67,8 @@ Tap Dance<br>
 | 1 | § | - | TG(1) | - |
 | 2 | Home | - | End | - |
 | 3 | Page Up | - | Page Down | - |
-| 4 | Apps | - | TG(1) | - |
-| 5 | Alt | MO(4) | TG(4) | - |
+| 4 | Apps | MO(1) | TG(1) | - |
+| 5 | Alt | - | TG(4) | - |
 
 <br>
 
@@ -116,9 +116,9 @@ Special functions layer<br>
 <ul>
 <li>IJKL to mouse cursor movement</li>
 <li>Function row media controls</li>
-<li>QWERT, ASDFG backlight controls</li>
+<li>QWERT, ASDFG: backlight controls</li>
 <li>Arrow keys media control</li>
-<li>Fn + Caps Lock: Caps Lock Toggle</li>
+<li>Right Fn + Caps Lock: Caps Lock Toggle</li>
 </ul>
 <br>
 
