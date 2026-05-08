@@ -33,7 +33,11 @@ ISO Nordic layout. VIAL support with customizations:
   </ul>
 <li> Backlight LED customizations
   <ul>
-  <li>Active layer indication with white LED backlight on keys with key mapping on MAC_FN, WIN_FN and LAYER_4</li>
+  <li>On MAC_FN, WIN_FN and LAYER_4
+    <ul>
+    <li>Active layer indication with white LED backlight on keys with key mapping</li>
+    <li>If keyboard backlight is close to white, 75% HUE, drop backlight to 50% on keys without keymapping </li>
+    </ul>
   <li>When Caps Lock active: White backlight on Caps Lock key</li>
   <li>When Scroll Lock active: White backlight on Scroll Lock key</li>
   </ul>
@@ -104,7 +108,7 @@ Special functions layer:<br>
 <ul>
 <li>IJKL to mouse cursor movement</li>
 <li>Function row media controls</li>
-<li>QWERT, ASDFG backlight controls</li>
+<li>QWERT, ASDFG: backlight controls</li>
 <li>Arrow keys media control</li>
 </ul>
 

@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         
     [WIN_FN] = LAYOUT_iso_109(
         _______,            KC_BRID,  KC_BRIU,  KC_TASK,  KC_FILE,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,    KC_VOLU,  _______,  _______,  RGB_TOG,  _______,  _______,  _______,  _______,
-        _______,  BT_HST1,  BT_HST2,  BT_HST3,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+        _______,  BT_HST1,  BT_HST2,  BT_HST3,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    RESET,    _______,  _______,  _______,  _______,  _______,  _______,  _______,
         RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  _______,  _______,  _______,  _______,  _______,  _______,  _______,              _______,  _______,  _______,  _______,  _______,  _______,  _______,
         _______,  RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  RGB_SPD,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,                                _______,  _______,  _______,
         _______,  _______,  _______,  _______,  _______,  _______,  BAT_LVL,  NK_TOGG,  _______,  _______,  _______,  _______,              _______,            _______,            _______,  _______,  _______,  _______,
@@ -63,19 +63,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  BT_HST1,  BT_HST2,  BT_HST3,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
         RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  _______,  MS_BTN1,  KC_UP,    MS_BTN2,  _______,  _______,  _______,              _______,  _______,  _______,  _______,  _______,  _______,  _______,
         _______,  RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  RGB_SPD,  _______,  MS_LEFT,  MS_DOWN,  MS_RGHT,  MS_BTN3,  _______,  _______,    _______,                                _______,  _______,  _______,
-        _______,  _______,  _______,  _______,  _______,  _______,  BAT_LVL,  MS_WHLD,  MS_WHLU,  _______,  _______,  _______,              _______,            KC_MUTE,            _______,  _______,  _______,  _______,
+        _______,  _______,  _______,  _______,  _______,  _______,  BAT_LVL,  MS_WHLU,  MS_WHLD,  _______,  _______,  _______,              _______,            KC_MUTE,            _______,  _______,  _______,  _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,  _______,    _______,  KC_MPLY,  KC_MPRV,  KC_MNXT,  _______,            _______          ),
 
 };
 
 
 /* LEDS:
-Capslock: 61, 63 PCB
-Scroll lock: 14, 15 PCB
+Capslock: 63 PCB
+Scroll lock: 15 PCB
+
 */
 
-// ---------- RGB Matrix Layer Highlights ----------
-// If MAC_FN, WIN_FN or LAYER_4 active, change backlight to white
 #include "quantum.h"
 #include "rgb_matrix.h"
 
@@ -85,26 +84,43 @@ static bool is_key_usable(uint16_t keycode) {
     return !(keycode == KC_NO || keycode == KC_TRNS);
 }
 
+// Returns true if the current RGB matrix color is close to white.
+// White in HSV = saturation near 0. Threshold of 90/255 (~75%) gives
+// a comfortable margin for "warm white" and other near-white presets.
+static bool is_close_to_white(void) {
+    // return rgb_matrix_config.hsv.s < 30;
+    return rgb_matrix_config.hsv.s < 192;
+}
+
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     uint8_t layer = get_highest_layer(layer_state);
 
     if (layer == 1 || layer == 3 || layer == 4) {
         uint8_t v = rgb_matrix_config.hsv.v;
-        const uint8_t min_val = 128;
-        const uint8_t max_r = 255;
-        const uint8_t max_g = 255;
-        const uint8_t max_b = 255;
+        const uint8_t min_val = 40;
 
+        // --- Step 1: dim the whole keyboard to 50% if color is near white ---
+        if (is_close_to_white()) {
+            HSV hsv_dim  = rgb_matrix_config.hsv;
+            hsv_dim.v    = v / 2;                   // 50 % of global brightness
+            // hsv_dim.v    = v * 0.7;                   // 70 % of global brightness
+            RGB rgb_dim  = hsv_to_rgb(hsv_dim);
+
+            for (uint8_t i = led_min; i < led_max; i++) {
+                rgb_matrix_set_color(i, rgb_dim.r, rgb_dim.g, rgb_dim.b);
+            }
+        }
+
+        // --- Step 2: highlight active keys in white (overrides the dim pass) ---
         for (uint8_t row = 0; row < MATRIX_ROWS; row++) {
             for (uint8_t col = 0; col < MATRIX_COLS; col++) {
                 uint16_t keycode = keymap_key_to_keycode(layer, (keypos_t){col, row});
                 if (is_key_usable(keycode)) {
                     uint8_t led_index = g_led_config.matrix_co[row][col];
-                    // Only touch LEDs within the range assigned to this call
                     if (led_index != NO_LED && led_index >= led_min && led_index < led_max) {
-                        uint8_t r = min_val + ((uint16_t)(max_r - min_val) * v / 255);
-                        uint8_t g = min_val + ((uint16_t)(max_g - min_val) * v / 255);
-                        uint8_t b = min_val + ((uint16_t)(max_b - min_val) * v / 255);
+                        uint8_t r = min_val + ((uint16_t)(255 - min_val) * v / 255);
+                        uint8_t g = min_val + ((uint16_t)(255 - min_val) * v / 255);
+                        uint8_t b = min_val + ((uint16_t)(255 - min_val) * v / 255);
                         rgb_matrix_set_color(led_index, r, g, b);
                     }
                 }
@@ -112,7 +128,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
         }
     }
     // Indicator LEDS
-    // Caps lock: 63 PCB
+    // Caps lock: 62 PCB
     if (host_keyboard_led_state().caps_lock) {
         rgb_matrix_set_color(61, 255, 255, 255);
     }
