@@ -61,13 +61,6 @@ Tap Dance<br>
 | 2 | Alt | - | TG(4) | - |
 <br>
 
-Layer 0 macros<br>
-| Macro | Action |
-| -- | -- |
-| 4 | Ctrl + Page Up |
-| 5 | Ctrl + Page Down |
-<br>
-
 Key Combos<br>
 | Combo | Function |
 | -- | -- | 
@@ -117,7 +110,6 @@ Special functions layer:<br>
 Layer 4 macros<br>
 | Macro | Action |
 | -- | -- |
-| 3 | Shift + F10 |
 | 4 | Ctrl + Page Up |
 | 5 | Ctrl + Page Down |
 <br>
