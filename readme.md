@@ -4,6 +4,7 @@ Collection of keyboard layouts<br>
 * [Keychron](#keychron)
   * [Keychron Q11 ISO vial-ijkl](#keychron-q11-iso-vial-ijkl)
   * [Keychron K10 Pro RGB ISO vial-ijkl](#keychron-k10-pro-iso-rgb-vial-ijkl)
+* [MonsGeek](#Monsgeek)
 * [Glorious](#glorious)
   * [Glorious GMMK 2 Compact 65% ISO vial-ijkl](#glorious-gmmk-2-compact-65-iso-vial-ijkl)
   * [Glorious GMMK 2 Compact 65% ISO vial](#glorious-gmmk-2-compact-65-iso-vial)
@@ -116,6 +117,50 @@ Fork based on Tymon3310 vial-qmk repo:<br>
 https://github.com/tymon3310/vial-qmk/tree/vial-keychron
 <br>
 <br>
+
+## MonsGeek
+### MonsGeek M1 V5 ISO
+[![MonsGeek M1 V5 ISO via-ijkl](monsgeek/m1_v5_uk/via-ijkl/img/monsgeek_m1_v5_uk_via_ijkl-layer00.png "MonsGeek M1 V5 ISO via-ijkl")](https://github.com/Polte451/qmk-keyboards/tree/master/monsgeek/m1_v5_uk/via-ijkl)
+
+ISO Nordic layout. VIA support with customizations:
+<ul>
+<li>Total 7 mappable layers
+  <ul>
+  <li>Layer 5: IJKL to Arrow Keys</li>
+  <li>Layer 6: IJKL to Mouse</li>
+  </ul>
+<li>Right side column keys</li>
+  <ul>
+  <li>Home -> Insert</li>
+  <li>Page Up -> Delete</li>
+  <li>Page Down -> Home / Double tap: Page Up</li>
+  <li>End -> End / Double tap: Page Down</li>
+  </ul>
+<li>via-ijkl/keymap.c mods
+  <ul>
+  <li>§ key tap: §</li>
+  <li>§ key double tap: Toggle layer 5: IJKL to arrow keys</li>
+  <li>Home key tap: Home</li>
+  <li>Home key double tap: Page Up</li>
+  <li>End key tap: End</li>
+  <li>End key double tap: Page Down</li>
+  </ul>
+<li> m1_v5_uk.c key tap combo mods
+  <ul>
+  <li>Right Control + Left Control: Toggle Capsloc</li>
+  <li>Right Control + Capslock: Toggle Capsloc</li>
+  <li>Capslock + Space: Toggle Layer 5 - IJKL to Arrow Keys</li>
+  <li>Right Shift + Space: Toggle Layer 6 - IJKL to Mouse</li>
+  </ul>
+<li>config.h mods
+  <ul>
+  <li>Remapped Bluetooth, 2,4 GHz and USB-connection indication LEDSs to keys 1,2,3,4 and 5</li>
+  </ul>
+</ul>
+
+Fork based on MonsGeek repo with wireless -branch:
+https://github.com/MonsGeek/qmk_firmware.git
+
 ## Glorious
 
 ### Glorious GMMK 2 Compact 65% ISO vial-ijkl
