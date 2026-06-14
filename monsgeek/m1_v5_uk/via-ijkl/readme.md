@@ -36,7 +36,7 @@ ISO Nordic layout. VIA support with customizations:
   </ul>
 </ul>
 <br>
-Fork based on MonsGeek repo with wireless -branch:
+Fork based on MonsGeek repo with wireless -branch:<br>
 https://github.com/MonsGeek/qmk_firmware.git
 
 <br>

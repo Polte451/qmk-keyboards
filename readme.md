@@ -5,6 +5,7 @@ Collection of keyboard layouts<br>
   * [Keychron Q11 ISO vial-ijkl](#keychron-q11-iso-vial-ijkl)
   * [Keychron K10 Pro RGB ISO vial-ijkl](#keychron-k10-pro-iso-rgb-vial-ijkl)
 * [MonsGeek](#Monsgeek)
+  * [MonsGeek M1 V5 ISO via-ijkl](#monsgeek-m1-v5-iso-via-ijkl)
 * [Glorious](#glorious)
   * [Glorious GMMK 2 Compact 65% ISO vial-ijkl](#glorious-gmmk-2-compact-65-iso-vial-ijkl)
   * [Glorious GMMK 2 Compact 65% ISO vial](#glorious-gmmk-2-compact-65-iso-vial)
@@ -119,7 +120,7 @@ https://github.com/tymon3310/vial-qmk/tree/vial-keychron
 <br>
 
 ## MonsGeek
-### MonsGeek M1 V5 ISO
+### MonsGeek M1 V5 ISO via-ijkl
 [![MonsGeek M1 V5 ISO via-ijkl](monsgeek/m1_v5_uk/via-ijkl/img/monsgeek_m1_v5_uk_via_ijkl-layer00.png "MonsGeek M1 V5 ISO via-ijkl")](https://github.com/Polte451/qmk-keyboards/tree/master/monsgeek/m1_v5_uk/via-ijkl)
 
 ISO Nordic layout. VIA support with customizations:
