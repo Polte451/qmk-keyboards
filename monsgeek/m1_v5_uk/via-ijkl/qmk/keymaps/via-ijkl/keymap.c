@@ -70,10 +70,43 @@ tap_dance_action_t tap_dance_actions[] = {
     [TD_END_PGDN]   = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_end_finished,  dance_end_reset),
 };
 
+// Key Combos - Start
+enum combos {
+    CTRL_CAPS_COMBO,
+    RCTRL_SPACE_L5_COMBO,
+    LSFT_SPACE_L6_COMBO,
+};
+
+const uint16_t PROGMEM ctrl_caps_combo[] = {
+    KC_LCTL,
+    KC_RCTL,
+    COMBO_END
+};
+
+const uint16_t PROGMEM rctl_space_l5_combo[] = {
+    KC_RCTL,
+    KC_SPC,
+    COMBO_END
+};
+
+const uint16_t PROGMEM lsft_space_l6_combo[] = {
+    KC_LSFT,
+    KC_SPC,
+    COMBO_END
+};
+
+combo_t key_combos[] = {
+    [CTRL_CAPS_COMBO]     = COMBO(ctrl_caps_combo, KC_CAPS),
+    [RCTRL_SPACE_L5_COMBO] = COMBO(rctl_space_l5_combo, TG(_FCL)),
+    [LSFT_SPACE_L6_COMBO] = COMBO(lsft_space_l6_combo, TG(_FDL)),
+};
+
+// Key Combos - End
+
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-    [_BL] = LAYOUT( /* Base WIN 0*/
+    [_BL] = LAYOUT( /* Base WIN 0 - L0*/
         KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_PSCR,  KC_MUTE,
 TD(TD_GRV_TOGGLE),KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINS,  KC_EQL,   KC_BSPC,  KC_INS,  
         KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,            KC_DEL,    
@@ -81,7 +114,7 @@ TD(TD_GRV_TOGGLE),KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC
         KC_LSFT,  KC_NUBS,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_RSFT,  KC_UP,    TD(TD_END_PGDN),
         KC_LCTL,  KC_LCMD,  KC_LALT,                      KC_SPC,                                 KC_RALT,  LT(1, KC_APP), KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
-    [_FL] = LAYOUT( /* Base WIN 1*/
+    [_FL] = LAYOUT( /* Base WIN 1 - L1*/
         _______,  KC_MYCM,  KC_MAIL,  KC_WSCH,  KC_WHOM,  KC_MSEL,  KC_MPLY,  KC_MPRV,  KC_MPLY,  KC_MNXT,  _______,  _______,  _______,  _______,  KC_SLEP,
         EE_CLR,   KC_BT1,   KC_BT2,   KC_BT3,   KC_2G4,   KC_USB,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,   
         RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  _______,  _______,   KC_INS,  _______,  _______,  _______,  _______,            _______,
@@ -89,7 +122,7 @@ TD(TD_GRV_TOGGLE),KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC
         MO(_FCL), _______,  _______,  _______,  KC_CALC,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  MO(_FBL), RGB_VAI,  _______,
          _______, GU_TOGG,  _______,                      HS_BATQ,                                _______,  _______,  HS_CT_A,  KC_MPLY,  RGB_VAD,  KC_MNXT),
 
-    [_MBL] = LAYOUT( /* Base MAC 0 -> WIN 0 Default */
+    [_MBL] = LAYOUT( /* Base MAC 0 -> WIN 0 Default - L2*/
         KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_DEL,   KC_MUTE,
         KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINS,  KC_EQL,   KC_BSPC,  KC_HOME,  
         KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,            KC_PGUP,    
@@ -97,28 +130,28 @@ TD(TD_GRV_TOGGLE),KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC
         KC_LSFT,  KC_NUBS,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_RSFT,  KC_UP,    KC_END,
         KC_LCTL,  KC_LCMD,  KC_LALT,                      KC_SPC,                                 KC_RALT,  MO(_FL),  KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
-    [_MFL] = LAYOUT( /* Base MAC 1 -> WIN 1 Default */
+    [_MFL] = LAYOUT( /* Base MAC 1 -> WIN 1 Default - L3*/
         _______,  KC_MYCM,  KC_MAIL,  KC_WSCH,  KC_WHOM,  KC_MSEL,  KC_MPLY,  KC_MPRV,  KC_MPLY,  KC_MNXT,  _______,  _______,  _______,  RGB_MOD,  _______,
         EE_CLR,   KC_BT1,   KC_BT2,   KC_BT3,   KC_2G4,   KC_USB,   _______,  _______,  _______,  _______,  _______,  RGB_SPD,  RGB_SPI,  _______,  _______,   
         _______,  _______,  HS_DIR,   _______,  _______,  _______,  _______,  _______,  KC_INS,   _______,  KC_PSCR,  _______,  _______,            _______,  
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RGB_TOG,  _______,  _______,  _______,  _______,  _______, 
         _______,  _______,  _______,  _______,  KC_CALC,  _______,  _______,  _______,  KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,  MO(_FBL), RGB_VAI,  _______,
         _______,  _______,  _______,                      HS_BATQ,                                _______,  _______,  HS_CT_A,  RGB_SAI,  RGB_VAD,  RGB_SAD),
-    [_FBL] = LAYOUT( /* Base */ 
+    [_FBL] = LAYOUT( /* Base - L4*/ 
         QK_BOOT,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, 
         _______,  _______,  HS_DIR ,  _______,  BT_TEST,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,  
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
         _______,  _______,  _______,                      _______,                                _______,  _______,  _______,  _______,  _______,  _______),
-    [_FCL] = LAYOUT( /* Base */ 
+    [_FCL] = LAYOUT( /* Base - L5*/ 
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, 
         _______,  _______,  _______,  _______,  _______,  _______,  KC_F8,    KC_PGUP,  KC_UP,    KC_PGDN,  KC_BSPC,  _______,  _______,            _______,  
         _______,  _______,  _______,  _______,  _______,  MO(_FDL), _______,  KC_LEFT,  KC_DOWN,  KC_RIGHT, KC_ENT ,  _______,  _______,  _______,  _______,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_HOME,  KC_END,   KC_TAB,   _______,  _______,  _______,  _______,  _______,
         _______,  _______,  _______,                      _______,                                _______,  _______,  _______,  _______,  _______,  _______),
-    [_FDL] = LAYOUT( /* Base */ 
+    [_FDL] = LAYOUT( /* Base - L6*/ 
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,     _______,       _______,     _______,    _______,    _______,  _______,  _______,  
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,     _______,       _______,     _______,    _______,    _______,  _______,  _______, 
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_MS_BTN1,  KC_MS_UP,      KC_MS_BTN2,  _______,    _______,    _______,            _______,  

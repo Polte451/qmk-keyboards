@@ -145,22 +145,28 @@ ISO Nordic layout. VIA support with customizations:
   <li>Home key double tap: Page Up</li>
   <li>End key tap: End</li>
   <li>End key double tap: Page Down</li>
-  </ul>
-<li> m1_v5_uk.c key tap combo mods
-  <ul>
-  <li>Right Control + Left Control: Toggle Capsloc</li>
-  <li>Right Control + Capslock: Toggle Capsloc</li>
-  <li>Capslock + Space: Toggle Layer 5 - IJKL to Arrow Keys</li>
-  <li>Right Shift + Space: Toggle Layer 6 - IJKL to Mouse</li>
+  <li>Key Combos with keymap.c
+    <ul>
+    <li>Right Control + Left Control: Toggle Caps Lock</li>
+    <li>Right Control + Caps Lock: Toggle Caps Lock</li>
+    <li>Caps Lock + Space: Toggle Layer 5 - IJKL to Arrow Keys</li>
+    <li>Right Shift + Space: Toggle Layer 6 - IJKL to Mouse</li>
+    </ul>
   </ul>
 <li>config.h mods
   <ul>
-  <li>Remapped Bluetooth, 2,4 GHz and USB-connection indication LEDSs to keys 1,2,3,4 and 5</li>
+  <li>Remapped Bluetooth, 2,4 GHz and USB-connection indication LEDSs to keys from E,R,T,Y,U to 1,2,3,4,5</li>
+  </ul>
+<li>keyboard.json mods
+  <ul>
+  <li>Change default animation to rainbow_moving_chevron with speed 25</li>
+  <li>Change backlight brightness step from 26 to 13
   </ul>
 </ul>
+<br>
 
-Fork based on MonsGeek repo with wireless -branch:
-https://github.com/MonsGeek/qmk_firmware.git
+Fork based on MonsGeek repo with wireless -branch:<br>
+[https://github.com/MonsGeek/qmk_firmware/tree/wireless](https://github.com/MonsGeek/qmk_firmware/tree/wireless)<br>
 
 ## Glorious
 

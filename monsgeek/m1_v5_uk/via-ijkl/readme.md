@@ -22,22 +22,28 @@ ISO Nordic layout. VIA support with customizations:
   <li>Home key double tap: Page Up</li>
   <li>End key tap: End</li>
   <li>End key double tap: Page Down</li>
-  </ul>
-<li> m1_v5_uk.c key tap combo mods
-  <ul>
-  <li>Right Control + Left Control: Toggle Capsloc</li>
-  <li>Right Control + Capslock: Toggle Capsloc</li>
-  <li>Capslock + Space: Toggle Layer 5 - IJKL to Arrow Keys</li>
-  <li>Right Shift + Space: Toggle Layer 6 - IJKL to Mouse</li>
+  <li>Key Combos with keymap.c 
+    <ul>
+    <li>Right Control + Left Control: Toggle Caps Lock</li>
+    <li>Right Control + Caps Lock: Toggle Caps Lock</li>
+    <li>Caps Lock + Space: Toggle Layer 5 - IJKL to Arrow Keys</li>
+    <li>Right Shift + Space: Toggle Layer 6 - IJKL to Mouse</li>
+    </ul>
   </ul>
 <li>config.h mods
   <ul>
-  <li>Remapped Bluetooth, 2,4 GHz and USB-connection indication LEDSs to keys 1,2,3,4 and 5</li>
+  <li>Remapped Bluetooth, 2,4 GHz and USB-connection indication LEDSs to keys from E,R,T,Y,U to 1,2,3,4,5</li>
+  </ul>
+<li>keyboard.json mods
+  <ul>
+  <li>Change default animation to rainbow_moving_chevron with speed 25</li>
+  <li>Change backlight brightness step from 26 to 13
   </ul>
 </ul>
 <br>
+
 Fork based on MonsGeek repo with wireless -branch:<br>
-https://github.com/MonsGeek/qmk_firmware.git
+[https://github.com/MonsGeek/qmk_firmware/tree/wireless](https://github.com/MonsGeek/qmk_firmware/tree/wireless)<br>
 
 <br>
 
@@ -50,20 +56,21 @@ Base Windows layer with mods<br>
 
 Tap dance key functions on keymaps/via-ijkl/keymap.c
 
-| Function | On Tap  | On Double Tap |
-| -- | -- | -- |
-|  TD_GRV_TOGGLE | § | Toggle layer 5 |
-|  TD_HOME_PGUP | Home | Page Up |
-|  TD_GRV_TOGGLE | End | Page Down |
+| VIA keymap | Function | On Tap  | On Double Tap |
+| -- | -- | -- | -- |
+| 0x5700 | TD_GRV_TOGGLE | § | Toggle layer 5 |
+| 0x5701 | TD_HOME_PGUP | Home | Page Up |
+| 0x5702 | TD_GRV_TOGGLE | End | Page Down |
 
 <br>
 <br>
 
-Key Tap Combos on m1_v5_uk.c<br>
+Key Tap Combos on keymap.c<br>
 
 | Combo | Function |
 | -- | -- | 
-| Left Control + Caps Lock | Toggle Caps Lock |
+| Left Control + Right Control | Toggle Caps Lock |
+| Left Control + Caps Lock key | Toggle Caps Lock |
 | Caps Lock Key + Space | Toggle Layer 5 |
 | LShift + Space | Toggle Layer 6 |
 
@@ -174,7 +181,7 @@ Layer 6 macros<br>
 ## Make instructions
 
 Set up QMK build environment. Use MonsGeek -repo with wireless -branch: <br>
-[MonsGeek/qmk_firmware](https://github.com/MonsGeek/qmk_firmware.git)<br>
+[MonsGeek/qmk_firmware](https://github.com/MonsGeek/qmk_firmware/tree/wireless)<br>
 
 Folder for M1 V5 UK -files:<br>
 ```
@@ -187,7 +194,7 @@ monsgeek/m1_v5/m1_v5_uk/
 ├── keymaps/via-ijkl/keymap.c
 ├── keymaps/via-ijkl/rules.mk
 ├── config.h
-└── m1_v5_uk.c
+└── keyboard.json
 ```
 
 
@@ -195,8 +202,10 @@ Make bin-file:
 ```
 qmk compile -kb monsgeek/m1_v5/m1_v5_uk -km via-ijkl
 ```
+<br>
 
 Flash bin file to keyboard. Follow the standard flashing prodecure for M1 V5.<br>
+<br>
 
 Open VIA. <br>
 
@@ -205,6 +214,9 @@ Load saved layout:
 via/monsgeek_m1_v5_uk-via-ijkl.json
 ```
 
+<br>
+Backlight mode set<br>
+<br>
 Set backlight off, enable layer 5 and 6 indication<br>
 <ul>
   <li>Set keyboard mode switch to Windows, lower position</li>
